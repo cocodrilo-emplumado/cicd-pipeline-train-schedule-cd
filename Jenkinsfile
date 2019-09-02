@@ -12,7 +12,7 @@ pipeline {
             when {
                 branch 'master'
             }
-            steps 
+            steps {
                 input 'Does the staging environment look OK?'
                 milestone(1)
                 withCredentials([usernamePassword(credentialsId: 'centos_hyperv', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')]) {
